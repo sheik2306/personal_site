@@ -1,0 +1,26 @@
+I"%<h2 id="using-math-latex-support-in-blog-post-liquid-syntax">Using math Latex support in blog post. liquid syntax:</h2>
+
+<h5 id="add-in-file-header-">Add in file header :</h5>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+usemathjax: true
+---
+</code></pre></div></div>
+
+<p>Now latex works as normally as such :</p>
+
+<p><code class="language-plaintext highlighter-rouge">$$E=mc^2$$</code></p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">$$mean = \frac{\displaystyle\sum_{i=1}^{n} x_{i}}{n}$$</code></li>
+</ul>
+
+\[mean = \frac{\displaystyle\sum_{i=1}^{n} x_{i}}{n}\]
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">k_{n+1} = n^2 + k_n^2 - k_{n-1}</code> to write</li>
+</ul>
+
+\[k_{n+1} = n^2 + k_n^2 - k_{n-1}\]
+
+:ET

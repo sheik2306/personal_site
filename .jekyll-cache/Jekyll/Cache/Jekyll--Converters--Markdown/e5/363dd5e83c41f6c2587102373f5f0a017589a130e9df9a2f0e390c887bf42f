@@ -1,0 +1,42 @@
+I"
+<h3 id="how-to-make-a-re-usable-carousel-with-post-parameters">How to make a re-usable carousel with post parameters</h3>
+
+<ol>
+  <li>Add   <a href="https://jekyllcodex.org/without-plugin/slider/">Carousel file</a> inside _includes folder</li>
+</ol>
+
+<p>In the <code class="language-plaintext highlighter-rouge">fontmatter</code> of the post markdown file ( header ) add the images to display.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">---</span>
+<span class="nx">images</span><span class="p">:</span> 
+  <span class="o">-</span> <span class="nx">image</span><span class="p">:</span> <span class="o">/</span><span class="nx">assets</span><span class="o">/</span><span class="nx">img</span><span class="o">/</span><span class="nx">posts</span><span class="o">/</span><span class="mi">1</span><span class="p">.</span><span class="nx">png</span>
+  <span class="o">-</span> <span class="nx">image</span><span class="p">:</span> <span class="o">/</span><span class="nx">assets</span><span class="o">/</span><span class="nx">img</span><span class="o">/</span><span class="nx">posts</span><span class="o">/</span><span class="mi">2</span><span class="p">.</span><span class="nx">png</span>
+  <span class="o">-</span> <span class="nx">image</span><span class="p">:</span> <span class="o">/</span><span class="nx">assets</span><span class="o">/</span><span class="nx">img</span><span class="o">/</span><span class="nx">posts</span><span class="o">/</span><span class="mi">3</span><span class="p">.</span><span class="nx">png</span>
+<span class="o">---</span>
+</code></pre></div></div>
+
+<ol>
+  <li>Next include the html carousel where the post content is accessible.</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+  {% assign images = {{page.images}} %}
+    {% if images %}
+    {% include carousel.html height="50" unit="%" duration="7" images= images %}
+  {% endif %}`
+
+</code></pre></div></div>
+
+<p>This will include an <code class="language-plaintext highlighter-rouge">images</code> variable usable inside the carousel.html</p>
+
+<p><code class="language-plaintext highlighter-rouge">carousel.html</code></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+   {% for item in include.images %}
+
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">Change all occurences of site.data.carousel to include.images</code></p>
+
+<p>Done!</p>
+:ET
