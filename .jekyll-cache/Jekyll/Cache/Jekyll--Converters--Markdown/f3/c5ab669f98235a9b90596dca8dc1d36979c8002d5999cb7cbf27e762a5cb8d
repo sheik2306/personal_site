@@ -1,0 +1,33 @@
+I"�<h1 id="hello-world-">Hello World ,</h1>
+
+<p>This page is a demo that shows everything you can do inside blog posts.</p>
+
+<p>We’ve included everything you need to create engaging posts about your work, and show off your case studies in a beautiful way.</p>
+
+<p><strong>Obviously,</strong>we’ve styled up <em>all the basic</em> text formatting options available in <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">markdown</a>.</p>
+
+<p>You can create lists:</p>
+
+<ul>
+  <li>Simple bulleted lists</li>
+  <li>Like this one</li>
+  <li>Are cool</li>
+</ul>
+
+<p>And:</p>
+
+<ol>
+  <li>Numbered lists</li>
+  <li>Like this other one</li>
+  <li>Are great too</li>
+</ol>
+
+<p>You can also add <strong>blockquotes</strong>, which are shown at a larger width to help break up the layout and draw attention to key parts of your content:</p>
+
+<blockquote>
+  <p>“Simple can be harder than complex: You have to work hard to get your thinking clean to make it simple. But it’s worth it in the end because once you get there, you can move mountains.”</p>
+</blockquote>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">20</span><span class="p">;</span><span class="w">
+</span></code></pre></div></div>
+:ET
