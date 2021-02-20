@@ -138,7 +138,7 @@ header { background-color: var(--main-background-color); box-shadow: 0px; height
 .snipcart-payment-methods__title { background-color: black !important; }
 
 /* jumbotron */
-.jumbotron { background-color: var(--main-background-color) !important; background-image: url("https://images.pexels.com/photos/1037992/pexels-photo-1037992.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260"); background-attachment: fixed; background-size: cover; background-position: center; }
+.jumbotron { background-color: var(--main-background-color) !important; background-image: url("/assets/img/bg-header.jpg"); background-attachment: fixed; background-size: cover; background-position: right; }
 
 /* pagination */
 .pagination-link { padding: 15px; background-color: var(--card-background-color); text-decoration: none; }
@@ -510,5 +510,6 @@ footer { width: 100%; height: 70px; text-align: center; padding: 20px; backgroun
 
 /* Generic.Inserted & Diff Inserted */
 /* custom css goes below */
+#category-btn:hover { color: #E99102 !important; border-color: #E99102; transition: color .30s ease-in-out,background-color .15s ease-in-out,border-color .30s ease-in-out,box-shadow .15s ease-in-out; }
 
 /*# sourceMappingURL=main.css.map */

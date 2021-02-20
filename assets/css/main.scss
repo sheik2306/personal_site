@@ -6,3 +6,9 @@
 @import "devlopr";
 
 /* custom css goes below */
+
+#category-btn:hover {
+    color:#E99102 !important;
+    border-color:#E99102;
+    transition: color .30s ease-in-out,background-color .15s ease-in-out,border-color .30s ease-in-out,box-shadow .15s ease-in-out;
+}
