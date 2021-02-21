@@ -18,6 +18,8 @@ $(document).ready(function() {
           }),
           success: function(res){
               $('#contact-submit').text('Email was sent.');
+              $("#name-error").css({ visibility: "visible",display: "block"});
+
           },
           error: function(){
               $('#contact-submit').text('Error.');

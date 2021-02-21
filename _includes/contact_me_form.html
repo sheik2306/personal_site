@@ -40,7 +40,7 @@
   <p><textarea id="comment" name="comment" tabindex="3" required="" placeholder="Type your comment here" rows="4" cols="40"></textarea></p>
   <div class="g-recaptcha" data-sitekey="6LcOwmEaAAAAAANvvcUeSd9kXtDnHNbG2onXmgfr" class="form-control" style="width:100%;" data-callback="ccb"></div>
   <button id="contact-submit" disabled name="submit" type="submit" data-submit="...Sending">Submit</button>  </form>
-
+  <p id="name-error" style="color:red;">Sent</p>
 <script>
   function ccb(response) {
   document.getElementById("contact-submit").disabled = false;

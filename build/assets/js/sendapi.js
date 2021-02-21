@@ -9,7 +9,7 @@ $(document).ready(function() {
 
       $.ajax({
           type: "POST",
-          url: 'https://6urxe2yiti.execute-api.ca-central-1.amazonaws.com/Production/reCaptcha',
+          url: ' https://82c9zuga7h.execute-api.ca-central-1.amazonaws.com/default/reCaptcha',
           contentType: 'application/json',
           data: JSON.stringify({
               'name': name,
@@ -18,6 +18,8 @@ $(document).ready(function() {
           }),
           success: function(res){
               $('#contact-submit').text('Email was sent.');
+              $("#name-error").css({ visibility: "visible",display: "block"});
+
           },
           error: function(){
               $('#contact-submit').text('Error.');
