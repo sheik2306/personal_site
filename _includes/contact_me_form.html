@@ -38,8 +38,8 @@
   <p><input id="name" tabindex="1" name="name" required="" type="text" autofocus="" placeholder="Your name" size="40"/></p>
   <p><input tabindex="2" name="email" required="" type="email" placeholder="Email address" size="40" /></p>
   <p><textarea id="comment" name="comment" tabindex="3" required="" placeholder="Type your comment here" rows="4" cols="40"></textarea></p>
-  <div class="g-recaptcha" data-sitekey="6LcOwmEaAAAAAANvvcUeSd9kXtDnHNbG2onXmgfr" class="form-control" style="width:100%;" data-callback="ccb"></div>
-  <button id="contact-submit" disabled name="submit" type="submit" data-submit="...Sending">Submit</button>  </form>
+  <div class="g-recaptcha mb-4" data-sitekey="6LcOwmEaAAAAAANvvcUeSd9kXtDnHNbG2onXmgfr" class="form-control" style="width:100%;" data-callback="ccb"></div>
+  <button id="contact-submit" disabled name="submit" type="submit" data-submit="...Sending" class="btn btn-lg btn-dark" >Submit</button>  </form>
   <p id="name-error" style="color:red;">Sent</p>
 <script>
   function ccb(response) {

@@ -16,13 +16,15 @@ $(document).ready(function() {
               'email': email,
               'comment': comment
           }),
-          success: function(res){
-              $('#contact-submit').text('Email was sent.');
+          success: function(){
+              // $('#contact-submit').text('Email was sent.');
               $("#name-error").css({ visibility: "visible",display: "block"});
 
           },
           error: function(){
               $('#contact-submit').text('Error.');
+              $("#name-error").css({ visibility: "visible",display: "block"});
+
           }
       });
   })
