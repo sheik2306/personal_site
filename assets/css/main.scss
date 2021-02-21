@@ -12,3 +12,12 @@
     border-color:#E99102;
     transition: color .30s ease-in-out,background-color .15s ease-in-out,border-color .30s ease-in-out,box-shadow .15s ease-in-out;
 }
+
+#name-error {
+    display:none;
+    visibility: hidden;
+}
+
+.msg-error {
+    visibility: visible;
+}

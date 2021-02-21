@@ -5,10 +5,112 @@
     <description>Alex Dufour.</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 20 Feb 2021 12:49:14 -0500</pubDate>
-    <lastBuildDate>Sat, 20 Feb 2021 12:49:14 -0500</lastBuildDate>
+    <pubDate>Sun, 21 Feb 2021 10:43:59 -0500</pubDate>
+    <lastBuildDate>Sun, 21 Feb 2021 10:43:59 -0500</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
 
+    
+      <item>
+        <title>ReCaptcha</title>
+        <description>&lt;h2 id=&quot;adding-recaptcha-to-contact-form&quot;&gt;Adding Recaptcha to Contact Form&lt;/h2&gt;
+
+&lt;h3 id=&quot;amazon-services-api-gateway---lamda-function---sns&quot;&gt;Amazon services API Gateway - Lamda Function - SNS&lt;/h3&gt;
+
+&lt;p&gt;https://www.google.com/recaptcha&lt;/p&gt;
+
+&lt;p&gt;Get a secret and site key on google/recaptcha.&lt;/p&gt;
+
+&lt;p&gt;For a serverless method subscribe to an SNS AWS notification&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Create new topic &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;recaptcha&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Create subscription -&amp;gt; Protocol: Email&lt;/code&gt; with the email you wish to receive notifications from&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://aws.amazon.com/blogs/architecture/create-dynamic-contact-forms-for-s3-static-websites-using-aws-lambda-amazon-api-gateway-and-amazon-ses/&quot;&gt;!Contact form using Captcha&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Create an AWS account, search for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lamda&lt;/code&gt; - &amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;create function&lt;/code&gt; -&amp;gt; from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;blueprint&lt;/code&gt; -&amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;helloword&lt;/code&gt; in node.js&lt;/p&gt;
+
+&lt;p&gt;&lt;mark&gt;Important!&lt;/mark&gt; Inside the created function to add policies (SES policy)&lt;/p&gt;
+
+&lt;p&gt;go to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Lamda -&amp;gt; function -&amp;gt; Configuration&lt;/code&gt;&lt;br /&gt;
+Left side panel will have Permissions, Click on role name and add policies: choose SES policy or create custom policy&lt;/p&gt;
+
+&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;or&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;num1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;num2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;num1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;num2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Sun, 21 Feb 2021 04:05:23 -0500</pubDate>
+        <link>/blog/adding-recaptcha/</link>
+        <guid isPermaLink="true">/blog/adding-recaptcha/</guid>
+      </item>
+    
+      <item>
+        <title>Serverless Contact form AWS</title>
+        <description>&lt;h2 id=&quot;adding-contact-form-using-aws&quot;&gt;Adding Contact Form using AWS&lt;/h2&gt;
+
+&lt;h3 id=&quot;amazon-services-api-gateway---lamda-function---ses&quot;&gt;Amazon services API Gateway - Lamda Function - SES&lt;/h3&gt;
+
+&lt;p&gt;Part of a serverless website hosted on github pages and generated with Jekyll,
+Contact forms require dynamic data such as a database, api.&lt;/p&gt;
+
+&lt;p&gt;Using AWS serverless approach you pay by the usage and not per month.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://aws.amazon.com/blogs/architecture/create-dynamic-contact-forms-for-s3-static-websites-using-aws-lambda-amazon-api-gateway-and-amazon-ses/&quot;&gt;!Contact form using AWS&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Create an AWS account, search for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lamda&lt;/code&gt; - &amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;create function&lt;/code&gt; -&amp;gt; from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;blueprint&lt;/code&gt; -&amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;helloword&lt;/code&gt; in node.js&lt;/p&gt;
+
+&lt;p&gt;&lt;mark&gt;Important!&lt;/mark&gt; Inside the created function to add policies (SES policy)&lt;/p&gt;
+
+&lt;p&gt;go to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Lamda -&amp;gt; function -&amp;gt; Configuration&lt;/code&gt;&lt;br /&gt;
+Left side panel will have Permissions, Click on role name and add policies: choose SES policy or create custom policy&lt;/p&gt;
+
+&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;or&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;num1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;num2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;num1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;num2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;sum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+</description>
+        <pubDate>Sat, 20 Feb 2021 04:05:23 -0500</pubDate>
+        <link>/blog/adding-contact-form-aws/</link>
+        <guid isPermaLink="true">/blog/adding-contact-form-aws/</guid>
+      </item>
     
       <item>
         <title>Jekyll Carousel with parameters </title>
@@ -262,37 +364,21 @@ usemathjax: true
       
     
       
-    
-      
         
           <item>
-            <title></title>
-            <description>&lt;h3&gt;  {{ page.title }} &lt;/h3&gt;
+            <title>AWS</title>
+            <description>&lt;h5&gt; Posts by Category : {{ page.title }} &lt;/h5&gt;
 
-&lt;div id=&quot;categories&quot;&gt;
-{% for category in site.categories %}
-  &lt;div class=&quot;category-box&quot; &gt;
-    {% capture category_name %}{{ category | first }}{% endcapture %}
-    &lt;div id=&quot;#{{ category_name | slugize }}&quot;&gt;&lt;/div&gt;
-    &lt;h4 class=&quot;category-head&quot;&gt;&lt;a href=&quot;{{ site.baseurl }}/blog/categories/{{ category_name }}&quot;&gt;{{ category_name }}&lt;/a&gt;&lt;/h4&gt;
-    &lt;a name=&quot;{{ category_name | slugize }}&quot;&gt;&lt;/a&gt;
-     {% for post in site.categories[category_name] %}
-    &lt;article class=&quot;center&quot;&gt;
-      &lt;h6 &gt;&lt;a href=&quot;{{ site.baseurl }}{{ post.url }}&quot;&gt;{{post.title}}&lt;/a&gt;&lt;/h6&gt;
-    &lt;/article&gt;
-
-
-    {% endfor %}
-
-  &lt;/div&gt;
+&lt;div class=&quot;card&quot;&gt;
+{% for post in site.categories.AWS %}
+ &lt;li class=&quot;category-posts&quot;&gt;&lt;span&gt;{{ post.date | date_to_string }}&lt;/span&gt; &amp;nbsp; &lt;a href=&quot;{{ post.url }}&quot;&gt;{{ post.title }}&lt;/a&gt;&lt;/li&gt;
 {% endfor %}
-&lt;/div&gt;
-
-
-</description>
-            <link>/blog/categories/</link>
+&lt;/div&gt;</description>
+            <link>/blog/categories/aws/</link>
           </item>
         
+      
+    
       
     
       
@@ -322,6 +408,38 @@ usemathjax: true
 
 </description>
             <link>/blog/tags/</link>
+          </item>
+        
+      
+    
+      
+        
+          <item>
+            <title></title>
+            <description>&lt;h3&gt;  {{ page.title }} &lt;/h3&gt;
+
+&lt;div id=&quot;categories&quot;&gt;
+{% for category in site.categories %}
+  &lt;div class=&quot;category-box&quot; &gt;
+    {% capture category_name %}{{ category | first }}{% endcapture %}
+    &lt;div id=&quot;#{{ category_name | slugize }}&quot;&gt;&lt;/div&gt;
+    &lt;h4 class=&quot;category-head&quot;&gt;&lt;a href=&quot;{{ site.baseurl }}/blog/categories/{{ category_name }}&quot;&gt;{{ category_name }}&lt;/a&gt;&lt;/h4&gt;
+    &lt;a name=&quot;{{ category_name | slugize }}&quot;&gt;&lt;/a&gt;
+     {% for post in site.categories[category_name] %}
+    &lt;article class=&quot;center&quot;&gt;
+      &lt;h6 &gt;&lt;a href=&quot;{{ site.baseurl }}{{ post.url }}&quot;&gt;{{post.title}}&lt;/a&gt;&lt;/h6&gt;
+    &lt;/article&gt;
+
+
+    {% endfor %}
+
+  &lt;/div&gt;
+{% endfor %}
+&lt;/div&gt;
+
+
+</description>
+            <link>/blog/categories/</link>
           </item>
         
       
@@ -781,6 +899,8 @@ You can visit the blog using [http://your-github-username.github.io](http://your
             <link>/styleguide/</link>
           </item>
         
+      
+    
       
     
       

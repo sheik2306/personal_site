@@ -3,7 +3,7 @@ subtitle: A Portfolio Jekyll Theme
 description: >- # this means to ignore newlines until "baseurl:"
    Alex Dufour.
 
-url: "https://alexdufour.ca" # the base hostname & protocol for your site, e.g. https://alexdufour.ca https://alexdufour.ca
+url: "" # the base hostname & protocol for your site, e.g. https://alexdufour.ca https://alexdufour.ca
 baseurl: "" # the subpath of your site, e.g. /blog
 
 urls:
