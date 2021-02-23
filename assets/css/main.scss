@@ -21,3 +21,11 @@
 .msg-error {
     visibility: visible;
 }
+
+ a.active {
+    color: red !important;
+    cursor: default;
+  }
+
+  ul.nav a { cursor: pointer; }
+  .active { color:#f00 !important;font-weight:bolder; }

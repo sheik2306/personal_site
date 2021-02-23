@@ -14,5 +14,14 @@ layout: default
                 {%- for post in author_posts -%}
                 <li><a href="{{ post.url }}">{{ post.title }}</a></li>
                 {%- endfor -%}
+
+                <h2>Classes by this author</h2>
+                {%- assign classes_posts = site.classes
+                  | where: "author", page.username
+                -%}
+                {%- for class in classes_posts -%}
+                <li><a href="{{ class.url }}">{{ class.title }}</a></li>
+                {%- endfor -%}
+
          </div>
     </div>

@@ -1,4 +1,4 @@
-I"X<h2 id="adding-recaptcha-to-contact-form">Adding Recaptcha to Contact Form</h2>
+I"<h2 id="adding-recaptcha-to-contact-form">Adding Recaptcha to Contact Form</h2>
 
 <h3 id="amazon-services-api-gateway---lamda-function---sns">Amazon services API Gateway - Lamda Function - SNS</h3>
 
@@ -13,7 +13,7 @@
   <li><code class="language-plaintext highlighter-rouge">Create subscription -&gt; Protocol: Email</code> with the email you wish to receive notifications from</li>
 </ol>
 
-<p><a href="https://aws.amazon.com/blogs/architecture/create-dynamic-contact-forms-for-s3-static-websites-using-aws-lambda-amazon-api-gateway-and-amazon-ses/">!Contact form using Captcha</a></p>
+<p><a href="https://blog.agood.cloud/posts/2019/11/12/recaptcha-with-lambda-part-1/">Contact form using Captcha</a></p>
 
 <p>Create an AWS account, search for <code class="language-plaintext highlighter-rouge">lamda</code> - &gt; <code class="language-plaintext highlighter-rouge">create function</code> -&gt; from <code class="language-plaintext highlighter-rouge">blueprint</code> -&gt; <code class="language-plaintext highlighter-rouge">helloword</code> in node.js</p>
 

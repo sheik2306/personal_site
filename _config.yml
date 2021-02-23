@@ -4,7 +4,7 @@ description: >- # this means to ignore newlines until "baseurl:"
    Alex Dufour.
 
 url: "" # the base hostname & protocol for your site, e.g. https://alexdufour.ca https://alexdufour.ca
-baseurl: "" # the subpath of your site, e.g. /blog
+# baseurl: "" # the subpath of your site, e.g. /blog
 
 urls:
     - text: Home
@@ -23,6 +23,8 @@ urls:
       url: /styleguide
     - text: Get Started
       url: /get-started
+    - text: Classes
+      url:  /class
 
 # Edit Author details (For multi authors check _data/authors.yml)
 
@@ -133,6 +135,9 @@ collections:
     output: true
   authors:
     output: true
+  classes:
+    output: true  
+    permalink: /:collection/:title/
 
 defaults:
   -

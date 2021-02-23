@@ -31,7 +31,7 @@ For a serverless method subscribe to an SNS AWS notification
 2. `Create subscription -> Protocol: Email` with the email you wish to receive notifications from
 
 
-[!Contact form using Captcha](https://aws.amazon.com/blogs/architecture/create-dynamic-contact-forms-for-s3-static-websites-using-aws-lambda-amazon-api-gateway-and-amazon-ses/)
+[Contact form using Captcha](https://blog.agood.cloud/posts/2019/11/12/recaptcha-with-lambda-part-1/)
 
 
 Create an AWS account, search for `lamda` - > `create function` -> from `blueprint` -> `helloword` in node.js  

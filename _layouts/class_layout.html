@@ -1,0 +1,102 @@
+---
+layout: default
+---
+
+<div class="row">
+    <div class="col-lg-8 offset-md-2">
+   
+       </div>
+     </div>
+ </div>
+
+ <!-- {% for class in site.classes %}
+ <div class="card blog-post" data-easyitem="{{class.category}}">
+   <a href="{{ class.url | prepend: site.baseurl }}">
+     <img class="card-img-top"  src="{{site.url}}{{site.baseurl}}{{ class.thumbnail }}" alt="{{ class.title }}">
+   </a>
+     <div class="card-body center">
+         <img src="{{site.url}}{{site.baseurl}}/assets/img/{{ site.author_logo }}" class="author-profile-img">
+         <h4 class="card-title">{{ class.title }}</h4>
+
+         <h6 class="card-subtitle mb-2 text-muted">{{ class.date | date: "%b %-d, %Y" }}</h6>
+         <p class="card-text">{{ class.summary }} </p>
+
+         <a href="{{ class.url | prepend: site.baseurl }}" data-disqus-identifier="{{ class.url }}" class="btn btn-dark btn-lg">Read</a>
+
+     </div>
+ </div>
+ {% endfor %} -->
+
+
+
+{% for c in site.classes %}
+<div class="card blog-post" data-easyitem="{{c.category}}">
+    <a href="{{ c.url | prepend: site.baseurl }}">
+      <img class="card-img-top"  src="{{site.url}}{{site.baseurl}}{{ c.thumbnail }}" alt="{{ c.title }}">
+    </a>
+      <div class="card-body center">
+          <!-- <img src="{{site.url}}{{site.baseurl}}/assets/img/{{ site.author_logo }}" class="author-profile-img"> -->
+          <h4 class="card-title">{{ c.title }}</h4>
+ 
+          <h6 class="card-subtitle mb-2 text-muted">{{ c.date | date: "%b %-d, %Y" }}</h6>
+          <p class="card-text">{{ c.summary }} </p>
+ 
+          <a href="{{ c.url | prepend: site.baseurl }}" data-disqus-identifier="{{ c.url }}" class="btn btn-dark btn-lg">Read</a>
+          <!-- <span class="disqus-comment-count" data-disqus-identifier="{{ post.url }}"></span> -->
+ 
+      </div>
+  </div>
+{% if c.title == page.title %}
+  {% assign thisPost = c %}
+  {% if forloop.index == 1 %}
+    {% assign prevflag = 0 %}
+    {% assign nextflag = 1 %}
+  {% elsif forloop.index == forloop.length %}
+    {% assign prevflag = 1 %}
+    {% assign nextflag = 0 %}
+  {% else %}
+    {% assign prevflag = 1 %}
+    {% assign nextflag = 1 %}
+  {% endif %}
+{% endif %}
+{% endfor %}
+
+{% for c in site.classes %}
+  {% if c.title == page.title %}
+    {% assign prevflag = 0 %}
+  {% endif %}
+  {% if prevflag == 1 %}
+    {% assign prevPost = c %}
+    {% assign page.previous = c %}
+  {% endif %}
+{% endfor %}
+
+{% if nextflag == 1 %}
+  {% for c in site.classes %}
+    {% if foundPost == 1 %}
+      {% assign getNext = 1 %}
+    {% endif %}
+    {% if c.title == page.title %}
+      {% assign foundPost = 1 %}
+    {% endif %}
+    {% if getNext == 1%}
+      {% assign nextPost = c %}
+      {% assign page.next = c %}
+      {% assign foundPost = 0 %}
+      {% assign getNext = 0 %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+<div id="post-nav">
+    {% if prevPost.url %}
+    <a class="prev" rel="prev" href="{{ prevPost.url }}">
+        <span>&lt; {{ prevPost.title }}</span>
+    </a>
+    {% endif %}
+    {% if nextPost.url %}
+    <a class="next" rel="next" href="{{ nextPost.url }}">
+        <span>{{ nextPost.title }} &gt;</span>
+    </a>
+    {% endif %}
+</div>

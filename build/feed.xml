@@ -5,8 +5,8 @@
     <description>Alex Dufour.</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 21 Feb 2021 16:14:32 -0500</pubDate>
-    <lastBuildDate>Sun, 21 Feb 2021 16:14:32 -0500</lastBuildDate>
+    <pubDate>Mon, 22 Feb 2021 23:05:11 -0500</pubDate>
+    <lastBuildDate>Mon, 22 Feb 2021 23:05:11 -0500</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
 
     
@@ -27,7 +27,7 @@
   &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Create subscription -&amp;gt; Protocol: Email&lt;/code&gt; with the email you wish to receive notifications from&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://aws.amazon.com/blogs/architecture/create-dynamic-contact-forms-for-s3-static-websites-using-aws-lambda-amazon-api-gateway-and-amazon-ses/&quot;&gt;!Contact form using Captcha&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://blog.agood.cloud/posts/2019/11/12/recaptcha-with-lambda-part-1/&quot;&gt;Contact form using Captcha&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Create an AWS account, search for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;lamda&lt;/code&gt; - &amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;create function&lt;/code&gt; -&amp;gt; from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;blueprint&lt;/code&gt; -&amp;gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;helloword&lt;/code&gt; in node.js&lt;/p&gt;
 
@@ -388,37 +388,6 @@ usemathjax: true
             <description>&lt;h3&gt;  {{ page.title }} &lt;/h3&gt;
 
 &lt;div id=&quot;categories&quot;&gt;
-{% for tag in site.tags %}
-  &lt;div class=&quot;category-box&quot; &gt;
-    {% capture tag_name %}{{ tag | first }}{% endcapture %}
-    &lt;div id=&quot;#{{ tag_name | slugize }}&quot;&gt;&lt;/div&gt;
-    &lt;h4 class=&quot;tag-head&quot;&gt;&lt;a href=&quot;{{ site.baseurl }}/blog/categories/{{ tag_name }}&quot;&gt;{{ tag_name }}&lt;/a&gt;&lt;/h4&gt;
-    &lt;a name=&quot;{{ tag_name | slugize }}&quot;&gt;&lt;/a&gt;
-     {% for post in site.tags[tag_name] %}
-    &lt;article class=&quot;center&quot;&gt;
-      &lt;h6 &gt;&lt;a href=&quot;{{ site.baseurl }}{{ post.url }}&quot;&gt;{{post.title}}&lt;/a&gt;&lt;/h6&gt;
-    &lt;/article&gt;
-
-    {% endfor %}
-    
-  &lt;/div&gt;
-{% endfor %}
-&lt;/div&gt;
-
-
-</description>
-            <link>/blog/tags/</link>
-          </item>
-        
-      
-    
-      
-        
-          <item>
-            <title></title>
-            <description>&lt;h3&gt;  {{ page.title }} &lt;/h3&gt;
-
-&lt;div id=&quot;categories&quot;&gt;
 {% for category in site.categories %}
   &lt;div class=&quot;category-box&quot; &gt;
     {% capture category_name %}{{ category | first }}{% endcapture %}
@@ -445,6 +414,37 @@ usemathjax: true
       
     
       
+        
+          <item>
+            <title></title>
+            <description>&lt;h3&gt;  {{ page.title }} &lt;/h3&gt;
+
+&lt;div id=&quot;categories&quot;&gt;
+{% for tag in site.tags %}
+  &lt;div class=&quot;category-box&quot; &gt;
+    {% capture tag_name %}{{ tag | first }}{% endcapture %}
+    &lt;div id=&quot;#{{ tag_name | slugize }}&quot;&gt;&lt;/div&gt;
+    &lt;h4 class=&quot;tag-head&quot;&gt;&lt;a href=&quot;{{ site.baseurl }}/blog/categories/{{ tag_name }}&quot;&gt;{{ tag_name }}&lt;/a&gt;&lt;/h4&gt;
+    &lt;a name=&quot;{{ tag_name | slugize }}&quot;&gt;&lt;/a&gt;
+     {% for post in site.tags[tag_name] %}
+    &lt;article class=&quot;center&quot;&gt;
+      &lt;h6 &gt;&lt;a href=&quot;{{ site.baseurl }}{{ post.url }}&quot;&gt;{{post.title}}&lt;/a&gt;&lt;/h6&gt;
+    &lt;/article&gt;
+
+    {% endfor %}
+    
+  &lt;/div&gt;
+{% endfor %}
+&lt;/div&gt;
+
+
+</description>
+            <link>/blog/tags/</link>
+          </item>
+        
+      
+    
+      
     
       
     
@@ -462,6 +462,8 @@ usemathjax: true
             <link>/blog/categories/guides/</link>
           </item>
         
+      
+    
       
     
       
