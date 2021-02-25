@@ -14,27 +14,9 @@ fields:
   config:
     required: false
   label: Title
-- name: block_test
-  type: blocks
-  template_types:
-  - testing
-  - products
-  - product
-  config:
-    min: 
-    max: 
-  label: block_test
 - name: images
-  type: field_group_list
-  fields:
-  - name: imagest
-    type: image_gallery
-    config: {}
-    label: imagest
-  config:
-    min: 1
-    max: 3
-    labelField: 
+  type: image_gallery
+  config: {}
   label: images
 pages:
 - _classes/tester.md
