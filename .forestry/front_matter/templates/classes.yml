@@ -1,9 +1,0 @@
----
-label: classes
-hide_body: false
-fields:
-- name: summary
-  type: text
-  config:
-    required: false
-  label: Summary
