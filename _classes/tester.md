@@ -8,5 +8,9 @@ images:
 - imagest:
   - "/uploads/lenovo.png"
   - "/uploads/colorsd_-2.png"
+image:
+  image:
+  - "/uploads/colorsd_-2.png"
+  - "/uploads/lenovo.png"
 
 ---
