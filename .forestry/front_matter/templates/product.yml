@@ -27,3 +27,5 @@ fields:
   config:
     required: false
   label: Image
+pages:
+- _products/Product4.md
