@@ -14,9 +14,14 @@ fields:
   config:
     required: false
   label: Title
-- name: images
-  type: image_gallery
+- name: image
+  type: field_group
   config: {}
+  fields:
+  - name: image
+    type: image_gallery
+    config: {}
+    label: image
   label: images
 pages:
 - _classes/tester.md
