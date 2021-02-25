@@ -1,4 +1,16 @@
 ---
 label: Testing
 hide_body: true
-fields: []
+fields:
+- name: layout
+  type: text
+  config:
+    required: false
+  hidden: true
+  label: layout
+  default: class_article_layout
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
