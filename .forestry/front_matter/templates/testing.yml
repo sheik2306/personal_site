@@ -14,3 +14,11 @@ fields:
   config:
     required: false
   label: Title
+- name: block_test
+  type: blocks
+  template_types:
+  - testing
+  config:
+    min: 
+    max: 
+  label: block_test
